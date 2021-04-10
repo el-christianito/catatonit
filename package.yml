@@ -1,0 +1,28 @@
+name       : catatonit
+version    : 0.1.5
+release    : 1
+source     :
+    - https://github.com/openSUSE/catatonit/archive/v0.1.5.tar.gz : 60a2b4ed44a8d1fd76a5475adf52a7c18981e765bc23c2d8d409829bfcfdf683
+license    :
+    - GPL-3.0
+component  : virt
+summary    : A simple container init.
+description: |
+    A container init that is so simple it's effectively brain-dead. 
+    This is a rewrite of initrs in C, because we found that it is not possible to statically compile Rust binaries without using musl. 
+    That was, in turn, a reimplementation of other container inits like tini and dumb-init.
+    
+builddeps  :
+    - gcc
+    - glibc-devel
+    - glibc-32bit-devel
+    - automake
+    - autoconf
+setup      : |
+    autoreconf -fi
+    %configure
+build      : |
+    %make
+install    : |
+    %make_install
+    install -d -m00755 ${installdir}/usr/bin

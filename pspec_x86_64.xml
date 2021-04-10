@@ -1,0 +1,38 @@
+<PISI>
+    <Source>
+        <Name>catatonit</Name>
+        <Packager>
+            <Name>El Christianito</Name>
+            <Email>el-christianito@mail.ch</Email>
+        </Packager>
+        <License>GPL-3.0</License>
+        <PartOf>virt</PartOf>
+        <Summary xml:lang="en">A simple container init.</Summary>
+        <Description xml:lang="en">A container init that is so simple it&apos;s effectively brain-dead. 
+This is a rewrite of initrs in C, because we found that it is not possible to statically compile Rust binaries without using musl. 
+That was, in turn, a reimplementation of other container inits like tini and dumb-init.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>catatonit</Name>
+        <Summary xml:lang="en">A simple container init.</Summary>
+        <Description xml:lang="en">A container init that is so simple it&apos;s effectively brain-dead. 
+This is a rewrite of initrs in C, because we found that it is not possible to statically compile Rust binaries without using musl. 
+That was, in turn, a reimplementation of other container inits like tini and dumb-init.
+</Description>
+        <PartOf>virt</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/catatonit</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2020-11-18</Date>
+            <Version>0.1.5</Version>
+            <Comment>Packaging update</Comment>
+            <Name>El Christianito</Name>
+            <Email>el-christianito@mail.ch</Email>
+        </Update>
+    </History>
+</PISI>
